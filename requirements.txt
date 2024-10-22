@@ -1,3 +1,6 @@
 streamlit>=0.84
-scikit-learn>=1.0
+
 nltk
+numpy
+pandas
+gunicorn
