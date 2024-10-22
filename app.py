@@ -36,18 +36,20 @@ def transform_text(text):
         y.append(ps.stem(i))
     return " ".join(y)
 
+if st.button('Predict'):
+
 #1. Data preprocessing
-transformed_msg = transform_text(input_msg)
+  transformed_msg = transform_text(input_msg)
 
 #2. Vectorize
-vector_input = tfidf.transform([transformed_msg])
+  vector_input = tfidf.transform([transformed_msg])
 
 #3. predict
-result = model.predict(vector_input)[0]
+  result = model.predict(vector_input)[0]
 
 #4. Display
-if result == 1:
+  if result == 1:
     st.header("spam")
-else:
+  else:
     st.header("Not Spam")
 
